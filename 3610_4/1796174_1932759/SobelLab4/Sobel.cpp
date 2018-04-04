@@ -1,10 +1,10 @@
 #include "Sobel.h"
 #include <string.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define ABS(x)          ((x>0)? x : -x)
-#define IMG_WIDTH 		1920
-#define IMG_HEIGHT 		1080
-#define IMG_SIZE 		1920*1080
 
 typedef union {
 	uint8_t pix[4];
@@ -92,15 +92,15 @@ void sobel_filter(uint8_t inter_pix[IMG_WIDTH * IMG_HEIGHT], unsigned out_pix[IM
 #pragma HLS INTERFACE m_axi port=inter_pix offset=slave
 #pragma HLS INTERFACE m_axi port=out_pix offset=slave
 #pragma HLS INTERFACE s_axilite port=return
-	union OneToFourPixels oneToFourPixels;
+	OneToFourPixels oneToFourPixels;
 	uint8_t val;
 
 	while (true) {
 
 
 		//Create array
-		uint8_t * image = new uint8_t[IMG_SIZE];
-		uint8_t * result = new uint8_t[IMG_SIZE];
+		uint8_t * image = (uint8_t *) malloc(IMG_HEIGHT * IMG_WIDTH  * sizeof(uint8_t));
+		uint8_t * result = (uint8_t *) malloc(IMG_HEIGHT * IMG_WIDTH * sizeof(uint8_t));
 
 		for (unsigned int i = 0; i < IMG_SIZE; i++) {
 			//Request element
@@ -138,7 +138,7 @@ void sobel_filter(uint8_t inter_pix[IMG_WIDTH * IMG_HEIGHT], unsigned out_pix[IM
 			out_pix[i] = oneToFourPixels.full;
 		}
 
-		delete(image);
-		delete(result);
+		free(image);
+		free(result);
 	}
 }
