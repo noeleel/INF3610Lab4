@@ -76,3 +76,69 @@
 #pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3 ::: 877
 #pragma line 175 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3 ::: 878
 #pragma line 3 "SobelLab4/Sobel.cpp" 2 ::: 879
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 1 3 ::: 880
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 ::: 890
+#pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 2 3 ::: 896
+#pragma line 31 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 907
+#pragma line 72 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 933
+#pragma line 98 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 950
+#pragma line 140 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 981
+#pragma line 159 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 989
+#pragma line 202 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3 ::: 1005
+#pragma line 4 "SobelLab4/Sobel.cpp" 2 ::: 1010
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3 ::: 1011
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 ::: 1021
+#pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3 ::: 1027
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_push.h" 1 3 ::: 1030
+#pragma line 11 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3 ::: 1038
+#pragma line 26 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1045
+#pragma line 84 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1057
+#pragma line 108 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1070
+#pragma line 120 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1072
+#pragma line 157 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1074
+#pragma line 312 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1220
+#pragma line 330 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1228
+#pragma line 373 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1264
+#pragma line 417 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1299
+#pragma line 475 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3 ::: 1329
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 1 3 ::: 1365
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3 ::: 1375
+#pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 2 3 ::: 1381
+#pragma line 509 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3 ::: 1382
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3 ::: 1385
+#pragma line 511 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3 ::: 1393
+#pragma line 5 "SobelLab4/Sobel.cpp" 2 ::: 1394
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3 ::: 1395
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 ::: 1405
+#pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3 ::: 1411
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 1 3 4 ::: 1413
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 1 3 4 ::: 1452
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4 ::: 1459
+#pragma line 6 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4 ::: 1465
+#pragma line 38 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4 ::: 1480
+#pragma line 60 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4 ::: 1486
+#pragma line 90 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4 ::: 1488
+#pragma line 102 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4 ::: 1490
+#pragma line 10 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3 ::: 1495
+#pragma line 36 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1502
+#pragma line 46 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1504
+#pragma line 100 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1549
+#pragma line 132 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1559
+#pragma line 200 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1617
+#pragma line 209 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1619
+#pragma line 218 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1621
+#pragma line 227 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1623
+#pragma line 257 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1646
+#pragma line 266 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1648
+#pragma line 275 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1650
+#pragma line 284 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1652
+#pragma line 321 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1682
+#pragma line 446 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1779
+#pragma line 502 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1828
+#pragma line 574 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1881
+#pragma line 624 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3 ::: 1919
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 1 3 ::: 1926
+#pragma line 1 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3 ::: 1936
+#pragma line 9 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 2 3 ::: 1942
+#pragma line 629 "C:/Logiciels/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3 ::: 1943
+#pragma line 6 "SobelLab4/Sobel.cpp" 2 ::: 1944

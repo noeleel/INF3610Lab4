@@ -1,3 +1,4 @@
+
 #include "Sobel.h"
 #include <string.h>
 #include <malloc.h>
@@ -19,18 +20,18 @@ static inline uint8_t getVal(int index, int xDiff, int yDiff, uint8_t * Y)
 
 uint8_t sobel_operator(const int fullIndex, uint8_t * image)
 {
-#pragma HLS inline			// Inliner la fonction lui permet d'être "copiée-collée" là où elle est appellée
+#pragma HLS inline			// Inliner la fonction lui permet d'Ãªtre "copiÃ©e-collÃ©e" lÃ  oÃ¹ elle est appellÃ©e
 							// et ainsi faciliter le pipelinage de la boucle principale
-	/* À compléter en important votre code du lab 3.
-	 * À noter que la fonction peut avoir 3 signatures différentes, selon vos différentes modifications:
+	/* Ã€ complÃ©ter en important votre code du lab 3.
+	 * Ã€ noter que la fonction peut avoir 3 signatures diffÃ©rentes, selon vos diffÃ©rentes modifications:
 	 * uint8_t sobel_operator(const int fullIndex, uint8_t * image)
 	 * uint8_t sobel_operator(const int fullIndex, uint8_t image[IMG_HEIGHT * IMG_WIDTH])
 	 * uint8_t sobel_operator(const int col, const int row, uint8_t image[IMG_HEIGHT][IMG_WIDTH])
 	 *
-	 * Les deux premières sont assez équivalentes, mais la dernière permet d'accéder à l'image comme un
-	 * tableau 2D. Par contre, un tableau 2D doit alors lui être passé, ce qui n'est pas évident considérant
-	 * que les entrées de la fonction sobel_filtrer() sont 1D. Cependant, si pour une raison ou une autre
-	 * un buffer-cache intermédiaire était utilisé, celui-ci pourrait être 2D...
+	 * Les deux premiÃ¨res sont assez Ã©quivalentes, mais la derniÃ¨re permet d'accÃ©der Ã  l'image comme un
+	 * tableau 2D. Par contre, un tableau 2D doit alors lui Ãªtre passÃ©, ce qui n'est pas Ã©vident considÃ©rant
+	 * que les entrÃ©es de la fonction sobel_filtrer() sont 1D. Cependant, si pour une raison ou une autre
+	 * un buffer-cache intermÃ©diaire Ã©tait utilisÃ©, celui-ci pourrait Ãªtre 2D...
 	 */
 	int x_weight = 0;
 	int y_weight = 0;
@@ -48,12 +49,14 @@ uint8_t sobel_operator(const int fullIndex, uint8_t * image)
 
 	//Compute approximation of the gradients in the X-Y direction
 	for (int i = 0; i < 3; i++) {
+		printf("%d",0);
 		for (int j = 0; j < 3; j++) {
 		// X direction gradient
 		x_weight = x_weight + (getVal(fullIndex, i - 1, j - 1, image) * x_op[i][j]);
 
 		// Y direction gradient
 		y_weight = y_weight + (getVal(fullIndex, i - 1, j - 1, image) * y_op[i][j]);
+		printf("%d",1);
 		}
 	}
 
@@ -73,72 +76,63 @@ uint8_t sobel_operator(const int fullIndex, uint8_t * image)
 
 void sobel_filter(uint8_t inter_pix[IMG_WIDTH * IMG_HEIGHT], unsigned out_pix[IMG_WIDTH * IMG_HEIGHT])
 {
-	/* On demande à HLS de nous synthétiser des maîtres AXI que l'on connectera à la mémoire principale.
-	 * Ainsi, le CPU n'a pas besoin de transférer l'image au filtre: c'est le filtre qui va chercher l'image
-	 * dans la mémoire principale (DDR de la carte) et écrit le résultat dans cette même mémoire.
-	 * Un esclave AXI-Lite est aussi créé, accessible par le CPU, pour informer le filtre des adresses
-	 * auxquelles il doit aller chercher et écrire l'image, lui dire de démarrer ou d'arrêter, etc.
+	/* On demande Ã  HLS de nous synthÃ©tiser des maÃ®tres AXI que l'on connectera Ã  la mÃ©moire principale.
+	 * Ainsi, le CPU n'a pas besoin de transfÃ©rer l'image au filtre: c'est le filtre qui va chercher l'image
+	 * dans la mÃ©moire principale (DDR de la carte) et Ã©crit le rÃ©sultat dans cette mÃªme mÃ©moire.
+	 * Un esclave AXI-Lite est aussi crÃ©Ã©, accessible par le CPU, pour informer le filtre des adresses
+	 * auxquelles il doit aller chercher et Ã©crire l'image, lui dire de dÃ©marrer ou d'arrÃªter, etc.
 	 */
-	 
-	 	/*À remplacer par votre fonction *après* avoir répondu aux questions initiales
+
+	 	/*Ã€ remplacer par votre fonction *aprÃ¨s* avoir rÃ©pondu aux questions initiales
 		IMG: for (int i = 0; i < IMG_WIDTH * IMG_HEIGHT; ++i) {
 				uint8_t val = inter_pix[i];
 				OneToFourPixels fourWide;
 		OneTo4:	for (int j = 0; j < 4; ++j)
 					fourWide.pix[j] = val;
 				out_pix[i] = fourWide.full;*/
-	// ***** LES 3 LIGNES SUIVANTES DOIVENT ÊTRE DÉCOMMENTÉES UNE FOIS LES QUESTIONS INITIALES COMPLÉTÉES!! ******
-	
+	// ***** LES 3 LIGNES SUIVANTES DOIVENT ÃŠTRE DÃ‰COMMENTÃ‰ES UNE FOIS LES QUESTIONS INITIALES COMPLÃ‰TÃ‰ES!! ******
+
 #pragma HLS INTERFACE m_axi port=inter_pix offset=slave
 #pragma HLS INTERFACE m_axi port=out_pix offset=slave
 #pragma HLS INTERFACE s_axilite port=return
-	OneToFourPixels oneToFourPixels;
-	uint8_t val;
 
-	while (true) {
+		unsigned int pixel, data;
 
+		while (true) {
+			int index = 0;
 
-		//Create array
-		uint8_t * image = (uint8_t *) malloc(IMG_HEIGHT * IMG_WIDTH  * sizeof(uint8_t));
-		uint8_t * result = (uint8_t *) malloc(IMG_HEIGHT * IMG_WIDTH * sizeof(uint8_t));
-
-		for (unsigned int i = 0; i < IMG_SIZE; i++) {
-			//Request element
-			val = inter_pix[i];
-			for (unsigned int j = 0; j < 4; j++) {
-				oneToFourPixels.pix[j] = val;
+			for (int i = 0; i < IMG_HEIGHT; i++) {
+				for (int j = 0; j < IMG_WIDTH; j += 4) {
+					index = i * IMG_WIDTH + j;
+					pixel = inter_pix[8+index];
+					inter_pix[index] = pixel & 0xFF;
+					inter_pix[index + 1] = (pixel >> 8) & 0xFF;
+					inter_pix[index + 2] = (pixel >> 16) & 0xFF;
+					inter_pix[index + 3] = pixel >> 24;
+					printf("allo");
 				}
-			image[i] = oneToFourPixels.full;
-		}
-
-		//For simplicity, assume that the borders don't contain edges
-		for (unsigned int i = 0; i < IMG_WIDTH; ++i)
-			result[i] = 0;
-		for (unsigned int i = IMG_SIZE - IMG_WIDTH; i < IMG_SIZE; ++i)
-			result[i] = 0;
-		for (unsigned int i = 0; i < IMG_SIZE; i += IMG_WIDTH)
-			result[i] = 0;
-		for (unsigned int i = IMG_WIDTH - 1; i < IMG_SIZE; i += IMG_WIDTH)
-			result[i] = 0;
-
-		//Calling the operator for each pixel
-		for (unsigned int i = 1; i < IMG_HEIGHT - 1; ++i) {
-			for (unsigned int j = 1; j < IMG_WIDTH - 1; ++j) {
-				int fullIndex = i * IMG_WIDTH + j;
-				result[fullIndex] = sobel_operator(fullIndex, image);
+			}
+			for (int i = 0; i < IMG_HEIGHT; i++) {
+				for (int j = 0; j < IMG_WIDTH; j += 4) {
+					index = i * IMG_WIDTH + j;
+					if (i == 0 || i == IMG_HEIGHT - 1) {
+						out_pix[8 + index] = 0;
+						printf("yo");
+					}
+					else if (j == 0 || j  == IMG_WIDTH - 1) {
+						out_pix[8 + index] = 0;
+						printf("ya");
+					}
+					else {
+						out_pix[index] = sobel_operator(index, inter_pix);
+						out_pix[index + 1] = sobel_operator(index + 1, inter_pix) ;
+						out_pix[index + 2] = sobel_operator(index + 2, inter_pix) ;
+						out_pix[index + 3] = sobel_operator(index + 3, inter_pix) ;
+						data = (out_pix[index] << 24 | out_pix[index + 1] << 16| out_pix[index+ 2] << 8 | out_pix[index + 3]);
+						out_pix[8 + index] = data;
+						printf("bye");
+					}
+				}
 			}
 		}
-
-		//Write back nb. elements at the end
-		for (unsigned int i = 0; i < IMG_SIZE / sizeof(int); i++) {
-			val = result[i];
-			for (unsigned int j = 0; j < 4; j++) {
-				oneToFourPixels.pix[j] = val;
-				}
-			out_pix[i] = oneToFourPixels.full;
-		}
-
-		free(image);
-		free(result);
-	}
 }

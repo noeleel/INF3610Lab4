@@ -105,6 +105,7 @@ int main () {
 		R[i] = mypix.pix[1];
 		G[i] = mypix.pix[2];
 		B[i] = mypix.pix[3];
+		printf("%d",14);
 	}
 
 	//Write the image back to disk

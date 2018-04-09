@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/.apc/.src</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/.apc/.tb</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/solution1/.tcls</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/Sobel.cpp</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/Sobel.cpp</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/Sobel.cpp</location>
 		</link>
 		<link>
 			<name>testbench/ap_bmp.cpp</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/ap_bmp.cpp</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/ap_bmp.cpp</location>
 		</link>
 		<link>
 			<name>testbench/sobel_test.cpp</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/sobel_test.cpp</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/sobel_test.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/solution1/solution1.directive</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/solution1/directives.tcl</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/TEMP/3610_4/1796174_1932759/SobelLab4/solution1/script.tcl</location>
+			<location>C:/TEMP/INF3610_H18_Lab4/INF3610_H18_Lab4/3610_4/1796174_1932759/SobelLab4/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
