@@ -100,31 +100,22 @@ void sobel_filter(uint8_t inter_pix[IMG_WIDTH * IMG_HEIGHT], unsigned out_pix[IM
 		OneToFourPixels fourWide;
 
 		for (int i = 0; i < IMG_HEIGHT; i++) {
-			for (int j = 0; j < IMG_WIDTH; j += 4) {
-				index = i * IMG_WIDTH + j;
-				pixel = inter_pix[8+index];
-				inter_pix[index] = pixel & 0xFF;
-				inter_pix[index + 1] = (pixel >> 8) & 0xFF;
-				inter_pix[index + 2] = (pixel >> 16) & 0xFF;
-				inter_pix[index + 3] = pixel >> 24;
-			}
-		}
-		for (int i = 0; i < IMG_HEIGHT; i++) {
-			for (int j = 0; j < IMG_WIDTH; j += 4) {
+			for (int j = 0; j < IMG_WIDTH; j++) {
 				index = i * IMG_WIDTH + j;
 				if (i == 0 || i == IMG_HEIGHT - 1) {
-					out_pix[8 + index] = 0;
+					out_pix[index] = 0;
 				}
 				else if (j == 0 || j  == IMG_WIDTH - 1) {
-					out_pix[8 +index] = 0;
+					out_pix[index] = 0;
 				}
 				else {
 					OneToFourPixels fourWide;
-					fourWide.pix[0] = sobel_operator(index, inter_pix) << 24;
-					fourWide.pix[1] = sobel_operator(index + 1, inter_pix) << 16;
-					fourWide.pix[2] = sobel_operator(index + 2, inter_pix) << 8;
-					fourWide.pix[3] = sobel_operator(index + 3, inter_pix) ;
-					out_pix[8 + index] = fourWide.full;
+					fourWide.pix[0] = sobel_operator(index, inter_pix);
+					fourWide.pix[1] = sobel_operator(index + 1, inter_pix);
+					fourWide.pix[2] = sobel_operator(index + 2, inter_pix);
+					fourWide.pix[3] = sobel_operator(index + 3, inter_pix);
+					fourWide.full = (fourWide.pix[0] << 24 | fourWide.pix[1] << 16| fourWide.pix[2] << 8 | fourWide.pix[3]);
+					out_pix[index] = fourWide.full;
 				}
 			}
 		}
